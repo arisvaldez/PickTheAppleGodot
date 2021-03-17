@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/sprites/ui/flatDarkUp.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/ui/flatDarkRIght.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/ui/flatDarkLeft.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/ui/flatDarkDown.png" type="Texture" id=4]
+[ext_resource path="res://hud/TouchButtons.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 45.0
+
+[node name="TouchButtons" type="Node2D"]
+position = Vector2( 227.923, 372.116 )
+script = ExtResource( 5 )
+
+[node name="TouchButtonUp" type="TouchScreenButton" parent="."]
+position = Vector2( -40.947, -101.619 )
+normal = ExtResource( 1 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_up"
+visibility_mode = 1
+
+[node name="TouchButtonLeft" type="TouchScreenButton" parent="."]
+position = Vector2( -108.221, -37.711 )
+normal = ExtResource( 3 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_left"
+visibility_mode = 1
+
+[node name="TouchButtonDown" type="TouchScreenButton" parent="."]
+position = Vector2( -41.2324, 25.9289 )
+normal = ExtResource( 4 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_down"
+visibility_mode = 1
+
+[node name="TouchButtonRight" type="TouchScreenButton" parent="."]
+position = Vector2( 27.9818, -37.3304 )
+normal = ExtResource( 2 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_right"
+visibility_mode = 1

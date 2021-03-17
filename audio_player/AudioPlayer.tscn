@@ -1,0 +1,18 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/sounds/powerup.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/sounds/level_up.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sounds/pickup_apple.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/die.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/sounds/background.ogg" type="AudioStream" id=5]
+[ext_resource path="res://audio_player/AudioPlayer.gd" type="Script" id=6]
+
+[node name="AudioPlayer" type="Node"]
+script = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -15.0
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
+resources = [ PoolStringArray( "die", "level_up", "pickup_apple", "powerups" ), [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ) ] ]
